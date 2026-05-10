@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DeepWiki Explainer — Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="card">
+      <header>
+        <h1>DeepWiki Explainer</h1>
+        <p class="muted">No setup is needed — the extension works out of the box.</p>
+      </header>
+
+      <section>
+        <h2>API key <span class="optional">(optional)</span></h2>
+        <p class="muted">
+          Optional. Only needed if you want higher rate limits. Stored locally in
+          your browser profile.
+        </p>
+        <div class="row">
+          <input id="apiKey" type="password" placeholder="(leave blank for default)" autocomplete="off" spellcheck="false" />
+          <button id="toggleVisibility" class="ghost" type="button" title="Show/Hide">👁</button>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button id="save" class="primary" type="button">Save</button>
+        <span id="status" class="muted"></span>
+      </div>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>
