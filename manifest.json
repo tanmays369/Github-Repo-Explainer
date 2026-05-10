@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "DeepWiki Repo Explainer",
+  "version": "0.1.0",
+  "description": "Explains the architecture of any GitHub repository as a DeepWiki-style page with a generated infographic.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "deepwiki-explainer@local.dev",
+      "strict_min_version": "115.0"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://github.com/*",
+    "https://mcp.deepwiki.com/*",
+    "https://text.pollinations.ai/*",
+    "https://image.pollinations.ai/*"
+  ],
+  "action": {
+    "default_title": "Explain this repo",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon-48.svg",
+      "128": "icon-128.svg"
+    }
+  },
+  "icons": {
+    "48": "icon-48.svg",
+    "128": "icon-128.svg"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self' blob: data: https://image.pollinations.ai; connect-src 'self' https://mcp.deepwiki.com https://text.pollinations.ai https://image.pollinations.ai"
+  }
+}
