@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DeepWiki Repo Explainer</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>DeepWiki Explainer</h1>
+          <p class="sub" id="repoLabel">Detecting repository…</p>
+        </div>
+      </div>
+      <button id="optionsBtn" class="ghost" title="Settings">⚙</button>
+    </header>
+
+    <section id="controls" class="controls">
+      <button id="analyzeBtn" class="primary" disabled>Analyze repository</button>
+      <span id="hint" class="hint"></span>
+    </section>
+
+    <section id="progress" class="progress hidden">
+      <div class="progress-row">
+        <div class="spinner" aria-hidden="true"></div>
+        <div id="progressText">Working…</div>
+      </div>
+      <ul id="progressLog" class="log"></ul>
+    </section>
+
+    <section id="result" class="result hidden">
+      <div id="visual" class="visual hidden">
+        <img id="visualImg" alt="Architecture infographic" />
+        <div id="visualCaption" class="caption"></div>
+      </div>
+      <article id="explanation" class="markdown"></article>
+      <details id="promptDetails" class="prompt-details hidden">
+        <summary>Pollinations visual prompt</summary>
+        <pre id="promptText"></pre>
+      </details>
+    </section>
+
+    <section id="error" class="error hidden"></section>
+
+    <script src="markdown.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
